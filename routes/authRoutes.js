@@ -66,7 +66,7 @@ router.post("/login", async (req, res) => {
       user: {
         id: user._id,
         email: user.email,
-        role: user.role   // ✅ THIS IS THE KEY
+        role: user.role  
       }
     });
   } catch (err) {

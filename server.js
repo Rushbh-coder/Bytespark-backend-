@@ -11,10 +11,15 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://bytespark.vercel.app/" 
+    "https://bytespark-6ne6zxebe-rushabhs-projects-527bd133.vercel.app"
   ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
-}));
+})); 
+
+
+
+
 
 app.use(express.json());
 
