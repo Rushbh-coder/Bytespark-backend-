@@ -11,11 +11,11 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://bytespark-6ne6zxebe-rushabhs-projects-527bd133.vercel.app"
+    "https://bytespark.vercel.app/" 
   ],
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
-})); 
+}));
+
 
 
 
@@ -26,6 +26,8 @@ app.use(express.json());
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.log(err));
+console.log("MONGO_URI:", process.env.MONGO_URI);
+
 
 
 app.use("/api/auth", require("./routes/authRoutes"));
